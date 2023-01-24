@@ -88,6 +88,20 @@ class LinkedList(object):
             previous_node.next = current_node.next
             self.length -= 1
 
+    # 先頭(最後)の要素を削除
+    def offer(self):
+        if self.head is None:
+            print("リストは空です。")
+            return
+        elif self.length == 1:
+            self.head = None
+            self.length -= 1
+        else:
+            current = self.head
+            self.head = current.next
+            self.length -= 1
+            del current
+
     # 末尾(最初)の要素を削除
     def poll(self):
         if self.head is None:
@@ -103,9 +117,24 @@ class LinkedList(object):
                 previous = current
                 current = current.next
             previous.next = None
-            del current
             self.length -= 1
+            del current
 
 
 if __name__ == '__main__':
-    linked_list = LinkedList()
+    l = LinkedList()
+    l.insert_first(1)
+    l.insert_first(2)
+    print(l)
+    l.offer()
+    print(l)
+    l.offer()
+    print(l)
+
+    l.insert_first(1)
+    l.insert_first(2)
+    print(l)
+    l.poll()
+    print(l)
+    l.poll()
+    print(l)
