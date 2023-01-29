@@ -11,10 +11,9 @@ class Solution:
         for i in range(len(nums)):
             num = nums[i]
             diff = target - num
-        if num in hash:
-            return [hash[num], i]
-        else:
-            hash[diff] = i
+            if diff in hash:
+                return [hash[diff], i]
+            else:
+                hash[num] = i
 
 # @lc code=end
-
