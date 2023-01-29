@@ -1,7 +1,7 @@
 #
-# @lc app=leetcode id=141 lang=python3
+# @lc app=leetcode id=142 lang=python3
 #
-# [141] Linked List Cycle
+# [142] Linked List Cycle II
 #
 
 # @lc code=start
@@ -12,18 +12,17 @@
 #         self.next = None
 
 class Solution:
-    def hasCycle(self, head: Optional[ListNode]) -> bool:
+    def detectCycle(self, head: Optional[ListNode]) -> Optional[ListNode]:
         hashMap = {}
         while head != None:
             if head.val <= - 10 ** 5 or 10 ** 5 <= head.val:
-                return False
+                return None
 
             if head in hashMap:
-                return True
+                return head
             hashMap[head] = head
             head = head.next
-        return False
+
+        return head
 
 # @lc code=end
-
-# head: Optional[ListNode] = [1,2]\npos = 0
