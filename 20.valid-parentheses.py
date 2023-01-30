@@ -12,16 +12,16 @@ class Solution:
             return False
 
         stack = []
-        dict = {
-            ")":"(",
-            "]":"[",
-            "}":"{"
+        bracketMap = {
+            "(":")",
+            "[":"]",
+            "{":"}"
         }
         for char in s:
-            if char in dict.values():
-                stack.append(char)
-            elif char in dict.keys():
-                if stack == [] or dict[char] != stack.pop():
+            if char in bracketMap:
+                stack.append(bracketMap[char])
+            elif char in bracketMap.values():
+                if stack == [] or char != stack.pop():
                     return False
             else:
                 return False
