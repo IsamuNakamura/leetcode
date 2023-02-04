@@ -27,9 +27,9 @@ class Solution:
         return result.next
 
         # runner = head
-        # while runner:
-        #     while runner.next and runner.next.val == runner.val:
-        #         runner.next = runner.next.next
+        # while runner != None:
+        #     while runner.next and runner.val == runner.next.val:
+        #             runner.next = runner.next.next
         #     runner = runner.next
         # return head
 
