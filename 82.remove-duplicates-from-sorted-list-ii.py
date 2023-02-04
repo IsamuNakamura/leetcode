@@ -20,7 +20,7 @@ class Solution:
         while cur:
             while cur.next and cur.val == cur.next.val:
                 cur = cur.next
-            if prev.next == cur:
+            if prev.next == cur: # valではない
                 print(cur.val)
 
                 prev = prev.next
