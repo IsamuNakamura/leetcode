@@ -7,7 +7,6 @@
 # @lc code=start
 class Solution:
     def isSubsequence(self, s: str, t: str) -> bool:
-
         index_s = 0
         index_t = 0
         while index_s < len(s) and index_t < len(t):
