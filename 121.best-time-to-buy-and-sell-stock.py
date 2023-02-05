@@ -18,7 +18,7 @@ class Solution:
                 profit = max(profit, price - sell)
         return profit
 
-        # 動的計画法
+        # # 動的計画法
         # n = len(prices)
         # if n < 2:
         #     return 0
@@ -29,7 +29,9 @@ class Solution:
         # for i in range(1, n):
         #     dp[i] = max(dp[i-1], prices[i] - min_price)
         #     min_price = min(min_price, prices[i])
-        # return dp[n-1]
+        # return dp[-1]
+        # # return dp[n-1]
+
 
 
 # @lc code=end
