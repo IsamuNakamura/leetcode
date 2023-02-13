@@ -22,5 +22,15 @@ class Solution:
                 break
         return common_prefix
 
+        # if not strs:
+        #     return ""
+        # ans = ""
+        # for num in zip(*strs):
+        #     if len(set(num)) == 1:
+        #        ans += num[0]
+        #     else:
+        #         return ans
+        # return ans
+
 
 # @lc code=end
