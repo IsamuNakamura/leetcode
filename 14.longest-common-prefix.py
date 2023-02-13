@@ -9,28 +9,28 @@ class Solution:
     def longestCommonPrefix(self, strs: List[str]) -> str:
         if not strs:
             return ""
-        elif len(strs) == 1:
-            return strs[0]
-
-        strs.sort()
-        common_prefix = ""
-
-        for i in range(len(strs[0])):
-            if strs[0][i] == strs[-1][i]:
-                common_prefix += strs[0][i]
+        ans = ""
+        for num in zip(*strs):
+            print(num)
+            print(set(num))
+            if len(set(num)) == 1:
+               ans += num[0]
             else:
-                break
-        return common_prefix
-
+                return ans
+        return ans
         # if not strs:
         #     return ""
-        # ans = ""
-        # for num in zip(*strs):
-        #     if len(set(num)) == 1:
-        #        ans += num[0]
-        #     else:
-        #         return ans
-        # return ans
+        # elif len(strs) == 1:
+        #     return strs[0]
 
+        # strs.sort()
+        # common_prefix = ""
+
+        # for i in range(len(strs[0])):
+        #     if strs[0][i] == strs[-1][i]:
+        #         common_prefix += strs[0][i]
+        #     else:
+        #         break
+        # return common_prefix
 
 # @lc code=end
